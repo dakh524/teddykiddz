@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Teddi Kidz Play School | Where Little Minds Grow Big Dreams</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Lexend:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-container": "#ffd966",
+                      "surface-bright": "#f7f9fb",
+                      "on-error-container": "#93000a",
+                      "outline-variant": "#d0c6b0",
+                      "surface-container": "#eceef0",
+                      "primary": "#735c00",
+                      "on-tertiary-fixed-variant": "#6d344f",
+                      "primary-fixed-dim": "#e7c353",
+                      "on-primary-fixed-variant": "#574500",
+                      "error-container": "#ffdad6",
+                      "secondary": "#1d6965",
+                      "error": "#ba1a1a",
+                      "on-secondary-fixed-variant": "#00504d",
+                      "on-background": "#191c1e",
+                      "secondary-container": "#a6ece7",
+                      "secondary-fixed-dim": "#8dd3ce",
+                      "outline": "#7e7664",
+                      "secondary-fixed": "#a9efea",
+                      "on-secondary-fixed": "#00201e",
+                      "on-surface": "#191c1e",
+                      "surface-variant": "#e0e3e5",
+                      "background": "#f7f9fb",
+                      "inverse-primary": "#e7c353",
+                      "surface-container-high": "#e6e8ea",
+                      "surface-container-low": "#f2f4f6",
+                      "on-primary-container": "#765e00",
+                      "on-surface-variant": "#4d4636",
+                      "tertiary-container": "#ffd0e1",
+                      "surface": "#f7f9fb",
+                      "on-primary-fixed": "#241a00",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#ffe088",
+                      "on-tertiary-container": "#8b4d69",
+                      "inverse-surface": "#2d3133",
+                      "tertiary": "#884b67",
+                      "on-primary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#e0e3e5",
+                      "on-secondary-container": "#236d69",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-dim": "#d8dadc",
+                      "tertiary-fixed": "#ffd8e6",
+                      "inverse-on-surface": "#eff1f3",
+                      "tertiary-fixed-dim": "#feb0d1",
+                      "on-tertiary-fixed": "#380823",
+                      "surface-tint": "#735c00",
+                      "on-tertiary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "section-gap": "80px",
+                      "unit": "8px",
+                      "container-max": "1280px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "body-md": ["Lexend"],
+                      "body-lg": ["Lexend"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "headline-xl": ["Plus Jakarta Sans"],
+                      "label-bold": ["Lexend"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .cloud-float { animation: float 6s ease-in-out infinite; }
+        .balloon-bob { animation: bob 4s ease-in-out infinite; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            50% { transform: translateY(-20px) translateX(10px); }
+        }
+        @keyframes bob {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        @keyframes slowRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .rotate-slow {
+            animation: slowRotate 30s linear infinite;
+        }
+        .perspective-card {
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .perspective-card:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animated-gradient {
+            background: linear-gradient(-45deg, #f7f9fb, #fff9e6, #f0fdfa, #f7f9fb);
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
+        }
+        .blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 217, 102, 0.15) 0%, rgba(255, 217, 102, 0) 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: 0;
+            animation: float 20s infinite alternate;
+        }
+        @keyframes floating {
+            0% { transform: translateY(-50%) translateX(0px); }
+            50% { transform: translateY(-60%) translateX(20px); }
+            100% { transform: translateY(-50%) translateX(0px); }
+        }
+        .float-animation {
+            animation: floating 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-surface-bright font-body-md text-on-surface selection:bg-primary-container selection:text-primary overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 w-full z-50 glass-nav border-b border-yellow-100/20 shadow-[0_4px_20px_rgba(255,217,102,0.1)]">
+<nav class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="flex items-center gap-3">
+    <img src="logo.png" alt="Teddi Kidz Logo" class="h-12 w-auto object-contain">
+    <span class="text-xl font-black tracking-tighter text-yellow-500 font-headline-md">Teddi Kidz Play School</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight">
+<a class="text-yellow-600 font-bold border-b-2 border-yellow-400 pb-1" href="#about">About</a>
+<a class="text-slate-600 hover:text-yellow-500 transition-all" href="#programs">Programs</a>
+<a class="text-slate-600 hover:text-yellow-500 transition-all" href="#facilities">Facilities</a>
+<a class="text-slate-600 hover:text-yellow-500 transition-all" href="#gallery">Gallery</a>
+<a class="text-slate-600 hover:text-yellow-500 transition-all" href="#faq">FAQ</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden sm:block px-6 py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-bold hover:scale-105 active:scale-95 transition-all shadow-md" href="enroll.html" target="_blank">Enroll Now</a>
+<a class="px-6 py-2.5 rounded-full border-2 border-primary-container text-primary font-label-bold hover:bg-primary-container/10 transition-all" href="enroll.html" target="_blank">Book a Visit</a>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden px-6 pt-20">
+<!-- Video Background -->
+<div class="absolute inset-0 z-0">
+    <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-30">
+        <source src="A_cute_teddy_bear_teacher_interacting_with_preschool_children_in_a_colorful_classroom,_kids_smiling,_seed2907717285.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-gradient-to-b from-surface-bright/80 via-surface-bright/40 to-surface-bright/80"></div>
+</div>
+
+<!-- Decorative Elements -->
+<div class="absolute top-20 left-10 cloud-float opacity-40">
+<span class="material-symbols-outlined text-secondary text-6xl">cloud</span>
+</div>
+<div class="absolute bottom-40 right-20 balloon-bob opacity-50">
+<span class="material-symbols-outlined text-tertiary text-7xl">child_care</span>
+</div>
+<div class="absolute top-40 right-1/4 opacity-20">
+<span class="material-symbols-outlined text-primary text-4xl animate-pulse">star</span>
+</div>
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-tertiary-container/30 text-tertiary border border-tertiary/20">
+<span class="material-symbols-outlined text-sm" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-xs font-label-bold uppercase tracking-widest">Enrolling for 2026-27</span>
+
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface leading-none">
+                        Where <span class="text-primary underline decoration-primary-container decoration-8 underline-offset-4">Little Minds</span> Grow Big Dreams
+                    </h1>
+<p class="text-body-lg text-on-surface-variant max-w-lg">
+                        A nurturing environment where curiosity meets play, and every child's journey is celebrated with care, safety, and joy.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a href="enroll.html" target="_blank" class="px-8 py-4 bg-primary-container text-on-primary-container rounded-full font-headline-md shadow-lg shadow-primary-container/30 hover:scale-105 active:scale-95 transition-all inline-block text-center">Enroll Your Child</a>
+<button class="px-8 py-4 bg-white border-2 border-outline-variant text-on-surface rounded-full font-headline-md hover:bg-surface-container-low transition-all">Take a Virtual Tour</button>
+</div>
+<div class="flex items-center gap-4 pt-8">
+<div class="flex -space-x-4">
+<div class="w-12 h-12 rounded-full border-4 border-white bg-secondary-container"></div>
+<div class="w-12 h-12 rounded-full border-4 border-white bg-primary-fixed-dim"></div>
+<div class="w-12 h-12 rounded-full border-4 border-white bg-tertiary-fixed-dim"></div>
+</div>
+<p class="text-sm font-label-bold text-on-surface-variant">Trusted by 500+ Happy Parents</p>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary-container/20 rounded-[3rem] blur-2xl group-hover:bg-primary-container/30 transition-all duration-700"></div>
+<img alt="Happy children playing" class="relative rounded-[2.5rem] shadow-2xl w-full h-[500px] object-cover border-8 border-white" data-alt="A diverse group of cheerful toddlers playing with colorful building blocks in a bright, modern preschool classroom. The room is filled with soft natural light, warm wooden textures, and pastel-colored educational wall art. The children are smiling broadly, dressed in vibrant clothing, reflecting a premium and joyful educational atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMHEvA2-g_J9svYoRhWTg75h8pMAkmcSz4rKrSZ9zH9lc8Uw_XVp-46smpKBJcLUyoR2ee-atwkqPJ3RJxkyVaMh6q9EKdYFAD2WcyvUaA5IOLTR5fhe8GKn4sJQAoYSkGxMDIxAwGP-SKDExTmVzPoLs9JmYq1Ub5le2hNFLUchqTouvrIMtyHWEECO2idckh6eAka775zdwHPEsbI2DvReWHjsMnJ8OdRIi8VzN3cjDslfD6BXhk51SMeWSwfHjZZhsBs3sNuYJ7"/>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 animated-gradient relative overflow-hidden" id="about">
+    <div class="blob -top-24 -left-24"></div>
+    <div class="blob -bottom-24 -right-24" style="animation-delay: -10s;"></div>
+
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 relative">
+<div class="grid grid-cols-2 gap-4">
+<img class="rounded-3xl h-64 w-full object-cover" data-alt="A close-up of a teacher gently guiding a preschool child through a creative painting activity. The environment is organized and aesthetic, with soft lighting and premium art supplies. The focus is on the nurturing interaction between mentor and student in a high-end play school setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkSCOKiRWexzKUTVi7y5sue5LHFEhTt4WSmsyulwYuBSdVnXrQ6RteosT9LaqoGdeMod5a0YgyZzUlX0yfqsxRIgq6jN8mInacnTKJ38xbn9Mv2EUsJYqus7g-RfaSKbYIfz9qwj7tCL-BZSVq1hqNzOwHAXulr5vk10ojP0-HKYzhXZoOYuDWd1TjAaS--64I7u-2EOOEmT3uuXLOz0dAmfB1YMS7LkrJsddvmhfCwSWt0e3b90TDCSE2Zr05tsxejE0J_bU9hUnb"/>
+<img class="rounded-3xl h-64 w-full object-cover mt-8" data-alt="Young children participating in a circle time activity in a modern classroom featuring sustainable wooden furniture and large windows. The mood is calm and focused, illustrating a high-quality educational environment that promotes holistic development and community." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGoVaMlKnf6I5DswF4i7LayH6TgJVeslK9WNJ_w3KLgRcak8OXSoJ9fTeJvisDCM-K7aRLRxR-ObSBlM3malh4UgFvDSfTgLu470JpKg3RQzwZP1FQLvBCySVqSFfpxqBK0XoZv4mqUCJjO-gasfhNV_uOoq-bm_ziV_wQVELwm4DB4klNrt2yXR3mRJdAcPkcDaLthSqY6tjN7f5TMEgrLTWqY9XB0ftegey4YZv2cOnDw0Pi_1xK9ccGkWX5bqayQZGdO3xxtQs1"/>
+</div>
+</div>
+<div class="order-1 lg:order-2 space-y-6">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Our Heart &amp; Mission</h2>
+<p class="text-body-lg text-on-surface-variant">
+                            At Teddi Kidz, we believe every child is a unique masterpiece. Our school was born from a vision to create a "second home" where little ones can explore their boundaries in a safe, vibrant space.
+                        </p>
+<div class="space-y-4">
+<div class="flex gap-4 items-start">
+<div class="p-3 bg-secondary-container rounded-2xl text-secondary">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+</div>
+<div>
+<h4 class="font-headline-md text-on-surface">Holistic Growth</h4>
+<p class="text-on-surface-variant">Developing cognitive, social, and emotional skills through structured play.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="p-3 bg-tertiary-container rounded-2xl text-tertiary">
+<span class="material-symbols-outlined" data-icon="diversity_3">diversity_3</span>
+</div>
+<div>
+<h4 class="font-headline-md text-on-surface">Global Community</h4>
+<p class="text-on-surface-variant">Nurturing a sense of belonging and respect for diverse cultures from day one.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Programs Bento Grid -->
+<section class="py-24 bg-surface-container-low relative overflow-hidden" id="programs">
+    <div class="absolute -top-24 -right-24 rotate-slow opacity-10">
+        <span class="material-symbols-outlined text-[300px]" style="font-variation-settings: 'opsz' 48;">eco</span>
+    </div>
+    <div class="absolute -bottom-24 -left-24 rotate-slow opacity-10" style="animation-direction: reverse;">
+        <span class="material-symbols-outlined text-[300px]" style="font-variation-settings: 'opsz' 48;">sunny</span>
+    </div>
+
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Our Learning Pathways</h2>
+<p class="text-body-lg text-on-surface-variant mt-4">Tailored curriculum designed for every developmental milestone.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Play Group -->
+<div class="bg-white p-8 rounded-[2rem] shadow-sm border border-outline-variant/30 perspective-card text-center">
+<div class="w-16 h-16 bg-primary-container/20 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="toys">toys</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-2">Play Group</h3>
+<p class="text-xs font-label-bold text-primary mb-4 uppercase tracking-tighter">1.5 - 2.5 Years</p>
+<p class="text-sm text-on-surface-variant">Fostering independence and sensory exploration through gentle play.</p>
+</div>
+<!-- Nursery -->
+<div class="bg-white p-8 rounded-[2rem] shadow-sm border border-outline-variant/30 perspective-card text-center">
+<div class="w-16 h-16 bg-secondary-container/20 text-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="draw">draw</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-2">Nursery</h3>
+<p class="text-xs font-label-bold text-secondary mb-4 uppercase tracking-tighter">2.5 - 3.5 Years</p>
+<p class="text-sm text-on-surface-variant">Language development and early social skills in a creative setup.</p>
+</div>
+<!-- Junior KG -->
+<div class="bg-white p-8 rounded-[2rem] shadow-sm border border-outline-variant/30 perspective-card text-center">
+<div class="w-16 h-16 bg-tertiary-container/20 text-tertiary rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="menu_book">menu_book</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-2">Junior KG</h3>
+<p class="text-xs font-label-bold text-tertiary mb-4 uppercase tracking-tighter">3.5 - 4.5 Years</p>
+<p class="text-sm text-on-surface-variant">Introducing logical reasoning, phonics, and hands-on math basics.</p>
+</div>
+<!-- Senior KG -->
+<div class="bg-white p-8 rounded-[2rem] shadow-sm border border-outline-variant/30 perspective-card text-center">
+<div class="w-16 h-16 bg-primary-fixed-dim/20 text-primary-fixed-variant rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-2">Senior KG</h3>
+<p class="text-xs font-label-bold text-primary-fixed-variant mb-4 uppercase tracking-tighter">4.5 - 5.5 Years</p>
+<p class="text-sm text-on-surface-variant">Preparing confident learners for their big school adventure ahead.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us Grid -->
+<section class="py-24 relative overflow-hidden bg-white">
+    <div class="blob top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-50"></div>
+
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Why Parents Trust Us</h2>
+<p class="text-body-lg text-on-surface-variant mt-4">We combine safety, innovation, and heart to create the ultimate learning experience.</p>
+</div>
+<a class="px-8 py-3 rounded-full bg-secondary text-white font-headline-md hover:scale-105 transition-all" href="enroll.html" target="_blank">Join the Family</a>
+</div>
+<div class="grid md:grid-cols-6 gap-6">
+<div class="md:col-span-3 bg-primary-container/10 p-10 rounded-[3rem] border border-primary-container/20">
+<span class="material-symbols-outlined text-5xl text-primary mb-6" data-icon="verified_user">verified_user</span>
+<h4 class="font-headline-lg text-on-surface mb-4">Safe &amp; Secure Campus</h4>
+<p class="text-body-md text-on-surface-variant">24/7 CCTV surveillance, biometric entry, and child-safe architecture designed for peace of mind.</p>
+</div>
+<div class="md:col-span-3 bg-secondary-container/10 p-10 rounded-[3rem] border border-secondary-container/20">
+<span class="material-symbols-outlined text-5xl text-secondary mb-6" data-icon="school">school</span>
+<h4 class="font-headline-lg text-on-surface mb-4">Trained Educators</h4>
+<p class="text-body-md text-on-surface-variant">Our staff are certified specialists in early childhood education, dedicated to gentle mentorship.</p>
+</div>
+<div class="md:col-span-2 bg-tertiary-container/10 p-10 rounded-[3rem] border border-tertiary-container/20">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-6" data-icon="extension">extension</span>
+<h4 class="font-headline-md text-on-surface mb-2">Activity Learning</h4>
+<p class="text-sm text-on-surface-variant">Learning by doing through games, drama, and art.</p>
+</div>
+<div class="md:col-span-2 bg-surface-container-high p-10 rounded-[3rem] border border-outline-variant/30">
+<span class="material-symbols-outlined text-4xl text-on-surface mb-6" data-icon="smart_display">smart_display</span>
+<h4 class="font-headline-md text-on-surface mb-2">Smart Classrooms</h4>
+<p class="text-sm text-on-surface-variant">Interactive whiteboards and digital learning tools.</p>
+</div>
+<div class="md:col-span-2 bg-primary-fixed-dim/10 p-10 rounded-[3rem] border border-primary-fixed-dim/20">
+<span class="material-symbols-outlined text-4xl text-primary-fixed-variant mb-6" data-icon="favorite">favorite</span>
+<h4 class="font-headline-md text-on-surface mb-2">Individual Focus</h4>
+<p class="text-sm text-on-surface-variant">Small batches ensuring every child is seen and heard.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Masonry -->
+<section class="py-24 bg-surface-bright" id="gallery">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Moments of Wonder</h2>
+<p class="text-body-lg text-on-surface-variant mt-4">A peek into daily life at Teddi Kidz Play School.</p>
+</div>
+<div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+<div class="relative group rounded-[2rem] overflow-hidden">
+<img class="w-full object-cover transition-transform duration-500 group-hover:scale-110" src="gallery_1.png" alt="Kids playing with teddy mascot">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+<span class="text-white font-headline-md">Mascot Fun</span>
+</div>
+</div>
+<div class="relative group rounded-[2rem] overflow-hidden">
+<img class="w-full object-cover transition-transform duration-500 group-hover:scale-110" src="gallery_2.png" alt="Outdoor playground">
+<div class="absolute inset-0 bg-gradient-to-t from-secondary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+<span class="text-white font-headline-md">Playground Joy</span>
+</div>
+</div>
+<div class="relative group rounded-[2rem] overflow-hidden">
+<img class="w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Preschoolers laughing while playing with a large colorful parachute in an outdoor garden area. The sun is shining, creating a high-energy and joyful atmosphere with vivid colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg6CrfdEgaGkEFJ6HBwrTA6DhG0nw86U8mT_9vO30n3VGEb835TNuIxfcJ6bqBbgNjI72ooz_95EpQBrlN90-KqXXGltwZOqhyOlzzp3JJFq5PVneFsYsneYA8hqU5MO99F8_XtpO2JUfa2eW3pSgF3HmqrtM88Xq5M1xpqRXNLOGiVwxZqwGLxSYJgJbYpzcvyydSoCtvufQT9wARfpCZiCJe-_CVFxi4Sxr-91PdUNd9lC1Z4NgCXnLotauNCsow1G5SrdDKysp2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+<span class="text-white font-headline-md">Outdoor Fun</span>
+</div>
+</div>
+<div class="relative group rounded-[2rem] overflow-hidden">
+<img class="w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A brightly lit indoor play area featuring soft foam mats, climbing structures, and educational wall panels in a premium children's play school." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbK1QK2SWpl65V4aq00LnBoyVjG4Nh2WqBu6qts_QR0ibSj4SIwxCr_Dps7OR8qpprYBrJ2fNPTBTn52NfisoXk3Y6_dsXgb30oWObZjiSQ1qWUYWB8AAxqQWMmNCrsnNlR4X-2dV5qLc-2j3DuvT5HXS2Jj2kybFa2Uv7b-Sk4Ztw2RhdLXG2USIQTZQCIpIaQz9U0YZe2sFXaZik6xMTwCFFOTAO-2U5j-lQ_jCdVCtETG07-L0Bd6qXCWn3tRQx0WWQeYJqswrp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-secondary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+<span class="text-white font-headline-md">Safe Play Zone</span>
+</div>
+</div>
+<div class="relative group rounded-[2rem] overflow-hidden">
+<img class="w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A focused young girl painting a colorful sun on a canvas, surrounded by high-quality art supplies in a light-filled classroom." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfLJsJlSs83dD5ozVEE5tP3XarGZ90EXSf7B4oAskLXdeWZbxWOsGEvIYdkvyclzdQZoDbcxZnRW4beCN9k6iA03a_ZehJAsg5y4rMod4UljtAa5FEJHuhPnGoNAErLG17cl6zEZZyQjPhdNmvJKr7LI8nelA9lOrDOt8_sMc-kSpDmhYBM7aHOyTAvyQ5qeolpfR2wLG9Y5RUzBf6AgAiK4ysQdkBmSAsqIDz3KIUWU9TmSkHlYBGT3DSQc0FcFbD_QfIYQCvulj9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-tertiary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+<span class="text-white font-headline-md">Creative Expression</span>
+</div>
+</div>
+<div class="relative group rounded-[2rem] overflow-hidden">
+<img class="w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Toddlers interacting with educational tablets in a smart classroom, showing the integration of technology in early childhood education." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZNrqU-lS9gBALDTGHNX1v5DDk44g2-1eWblpleNuEdancw0ZG_b3PWQEuOSYKjEL9GkNtcmH12QcdoFEx1xVPF0Ljyzm5r7NR3435eE5-523-gGqzpk-zTBG0gwuOMRB2NateF1Zip7OO0GJAXcwNco8vnbivLsfh8_I23GsYs2ZstRi6K6OiB0YKKgdFdKVh1nM9Jvffp2fslOON-GakOW6jYMiHGh-7mTcYTEzrTzbm2Nk8GoHqYmR2_de6KMnvwOA7FzMZUQQt"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+<span class="text-white font-headline-md">Smart Learning</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="font-headline-lg text-headline-lg text-on-surface text-center mb-16">What Our Parents Say</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest p-8 rounded-[2.5rem] border border-outline-variant/30 relative">
+<span class="material-symbols-outlined text-primary-container text-6xl absolute -top-4 -left-2 opacity-50" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="text-body-md text-on-surface-variant relative z-10 italic">"The transition for my toddler was so smooth. The teachers at Teddi Kidz are truly angels. My son wakes up every day excited for school!"</p>
+<div class="mt-8 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container"></div>
+<div>
+<p class="font-label-bold text-on-surface">Priya Sharma</p>
+<p class="text-xs text-on-surface-variant">Mother of Advik (Play Group)</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-[2.5rem] border border-outline-variant/30 relative">
+<span class="material-symbols-outlined text-secondary-container text-6xl absolute -top-4 -left-2 opacity-50" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="text-body-md text-on-surface-variant relative z-10 italic">"I love the transparency and the activity-based approach. The campus is impeccably clean and safe. Best decision we made for our daughter."</p>
+<div class="mt-8 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-container"></div>
+<div>
+<p class="font-label-bold text-on-surface">Anish Kapoor</p>
+<p class="text-xs text-on-surface-variant">Father of Riya (Senior KG)</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-[2.5rem] border border-outline-variant/30 relative">
+<span class="material-symbols-outlined text-tertiary-container text-6xl absolute -top-4 -left-2 opacity-50" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="text-body-md text-on-surface-variant relative z-10 italic">"Truly a premium school. The individual attention my child receives has boosted his confidence tremendously. Highly recommended!"</p>
+<div class="mt-8 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed"></div>
+<div>
+<p class="font-label-bold text-on-surface">Sanya Malhotra</p>
+<p class="text-xs text-on-surface-variant">Mother of Veer (Nursery)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Accordion -->
+<section class="py-24 bg-surface-container-low relative overflow-hidden" id="faq">
+    <!-- Animated Teddy Image -->
+    <div class="absolute -right-20 top-1/2 -translate-y-1/2 w-64 md:w-96 opacity-20 md:opacity-100 float-animation pointer-events-none z-0">
+        <img src="faq_teddy.png" alt="Teddy Teacher" class="rounded-full shadow-2xl border-8 border-white/50">
+    </div>
+    
+<div class="max-w-3xl mx-auto px-6 relative z-10">
+<h2 class="font-headline-lg text-headline-lg text-on-surface text-center mb-12">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<details class="group bg-white rounded-3xl border border-outline-variant/30 overflow-hidden" open="">
+<summary class="flex justify-between items-center p-6 cursor-pointer font-headline-md text-on-surface list-none">
+                            What are the school timings?
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-on-surface-variant border-t border-outline-variant/10">
+                            Our standard school hours are from 9:00 AM to 12:30 PM for Play Group and Nursery, and 9:00 AM to 1:30 PM for Junior and Senior KG. We also offer extended daycare facilities.
+                        </div>
+</details>
+<details class="group bg-white rounded-3xl border border-outline-variant/30 overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer font-headline-md text-on-surface list-none">
+                            Do you provide transportation?
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-on-surface-variant border-t border-outline-variant/10">
+                            Yes, we provide GPS-enabled transportation within a 5km radius of the campus. Each van is accompanied by a female attendant for safety.
+                        </div>
+</details>
+<details class="group bg-white rounded-3xl border border-outline-variant/30 overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer font-headline-md text-on-surface list-none">
+                            What is the teacher-child ratio?
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-on-surface-variant border-t border-outline-variant/10">
+                            We maintain a 1:10 ratio for Nursery and KG, and 1:8 for Play Group to ensure each child receives the personalized attention they deserve.
+                        </div>
+</details>
+</div>
+</div>
+</section>
+<!-- Contact & Admission Form -->
+<section class="py-24 animated-gradient relative overflow-hidden" id="enroll">
+    <div class="blob top-0 left-0 opacity-40"></div>
+
+<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
+<div class="space-y-8">
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Start Their <span class="text-tertiary">Journey</span> Today</h2>
+<p class="text-body-lg text-on-surface-variant">Fill out the form to schedule a visit or inquire about admissions. Our team will get back to you within 24 hours.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 bg-primary-container/20 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-xs font-label-bold text-on-surface-variant">Call Us</p>
+<p class="text-headline-md text-on-surface">9626119811</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 bg-primary-container/20 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-xs font-label-bold text-on-surface-variant">Our Location</p>
+<p class="text-headline-md text-on-surface">Vayavoor, Kanchipuram</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 bg-secondary-container/20 rounded-full flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-xs font-label-bold text-on-surface-variant">Email Us</p>
+<p class="text-headline-md text-on-surface">teddikidz@gmail.com</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 bg-tertiary-container/20 rounded-full flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">share</span>
+</div>
+<div>
+<p class="text-xs font-label-bold text-on-surface-variant">Follow Us</p>
+<p class="text-headline-md text-on-surface">@teddi_kidz_play_school</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-[3rem] shadow-xl border border-outline-variant/30">
+<form class="space-y-6" id="whatsappForm">
+<div class="grid md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-label-bold text-on-surface-variant uppercase ml-2">Parent Name</label>
+<input id="parentName" class="w-full px-6 py-4 rounded-2xl bg-white border-2 border-outline-variant/30 focus:border-secondary focus:ring-0 transition-all" placeholder="John Doe" type="text" required/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label-bold text-on-surface-variant uppercase ml-2">Phone Number</label>
+<input id="phoneNumber" class="w-full px-6 py-4 rounded-2xl bg-white border-2 border-outline-variant/30 focus:border-secondary focus:ring-0 transition-all" placeholder="+91 00000 00000" type="tel" required/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label-bold text-on-surface-variant uppercase ml-2">Child's Age</label>
+<select id="childAge" class="w-full px-6 py-4 rounded-2xl bg-white border-2 border-outline-variant/30 focus:border-secondary focus:ring-0 transition-all">
+<option>1.5 - 2.5 Years</option>
+<option>2.5 - 3.5 Years</option>
+<option>3.5 - 4.5 Years</option>
+<option>4.5 - 5.5 Years</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label-bold text-on-surface-variant uppercase ml-2">Your Message</label>
+<textarea id="message" class="w-full px-6 py-4 rounded-2xl bg-white border-2 border-outline-variant/30 focus:border-secondary focus:ring-0 transition-all" placeholder="Tell us about your child's needs..." rows="4"></textarea>
+</div>
+<div class="flex gap-4">
+    <button class="flex-1 py-5 rounded-2xl bg-primary text-white font-headline-md hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2" type="submit" id="submitWhatsapp">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7 8.38 8.38 0 0 1 3.8.9L21 3z"></path></svg>
+        WhatsApp
+    </button>
+    <button class="flex-1 py-5 rounded-2xl bg-secondary text-white font-headline-md hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-secondary/20 flex items-center justify-center gap-2" type="button" id="submitEmail">
+        <span class="material-symbols-outlined">mail</span>
+        Email
+    </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[3rem] mt-20 bg-slate-50 border-t border-slate-200">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8 py-16">
+<div class="md:col-span-2 space-y-6">
+<div class="flex items-center gap-3">
+    <img src="logo.png" alt="Teddi Kidz Logo" class="h-10 w-auto object-contain">
+    <span class="text-lg font-bold text-yellow-500 font-headline-lg">Teddi Kidz Play School</span>
+</div>
+
+<p class="font-['Plus_Jakarta_Sans'] text-sm text-slate-500 max-w-xs leading-relaxed">
+                    Dedicated to nurturing the leaders of tomorrow through compassion, safety, and modern educational excellence.
+                </p>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center hover:bg-yellow-400 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm">public</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center hover:bg-yellow-400 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<h5 class="font-label-bold text-on-surface">Quick Links</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-yellow-500 transition-colors text-sm" href="https://www.instagram.com/teddi_kidz_play_school" target="_blank">Instagram (@teddi_kidz)</a></li>
+<li><a class="text-slate-400 hover:text-yellow-500 transition-colors text-sm" href="https://teddikidz.in">Official Website (teddikidz.in)</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="font-label-bold text-on-surface">Newsletter</h5>
+<p class="text-sm text-slate-500">Get updates on events and admissions.</p>
+<div class="flex gap-2">
+<input class="bg-white border border-slate-200 px-4 py-2 rounded-xl text-sm w-full focus:ring-2 focus:ring-yellow-400 outline-none" placeholder="Email" type="email"/>
+<button class="p-2 bg-yellow-500 text-white rounded-xl hover:bg-yellow-600 transition-colors" onclick="alert('This feature is coming soon!')">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-8 border-t border-slate-200 text-center">
+<p class="font-['Plus_Jakarta_Sans'] text-sm text-slate-500">Vayavoor, Kanchipuram | © 2026 Teddi Kidz Play School. (teddikidz.in)</p>
+
+</div>
+</footer>
+
+<script>
+    // Handle WhatsApp Submission
+
+    document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const data = getFormData();
+        if (!data) return;
+        
+        const whatsappNumber = "9626119811";
+        const text = `*New Admission Inquiry*%0A%0A*Parent Name:* ${data.name}%0A*Phone:* ${data.phone}%0A*Child Age:* ${data.age}%0A*Message:* ${data.message}`;
+        window.open(`https://wa.me/91${whatsappNumber}?text=${text}`, '_blank');
+    });
+
+    // Handle Email Submission
+    document.getElementById('submitEmail').addEventListener('click', function() {
+        const data = getFormData();
+        if (!data) return;
+        
+        const email = "teddikidz@gmail.com";
+        const subject = "New Admission Inquiry - Teddi Kidz";
+        const body = `Parent Name: ${data.name}\nPhone: ${data.phone}\nChild Age: ${data.age}\n\nMessage:\n${data.message}`;
+        window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+
+    function getFormData() {
+        const name = document.getElementById('parentName').value;
+        const phone = document.getElementById('phoneNumber').value;
+        const age = document.getElementById('childAge').value;
+        const message = document.getElementById('message').value;
+        
+        if (!name || !phone) {
+            alert('Please fill in your name and phone number.');
+            return null;
+        }
+        return { name, phone, age, message };
+    }
+
+    // Handle "not working" buttons
+    const buttons = document.querySelectorAll('button, a');
+    buttons.forEach(btn => {
+        const text = btn.innerText.toLowerCase();
+        
+        if (text.includes('virtual tour')) {
+            btn.onclick = (e) => {
+                e.preventDefault();
+                alert('Virtual Tour is coming soon! Please fill the form below to book an in-person visit.');
+                document.getElementById('enroll').scrollIntoView({ behavior: 'smooth' });
+            };
+        }
+    });
+</script>
+
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/919626119811" target="_blank" class="fixed bottom-8 right-8 z-[100] bg-[#25d366] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all flex items-center gap-2 group">
+    <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 whitespace-nowrap font-label-bold">Chat with us</span>
+    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7 8.38 8.38 0 0 1 3.8.9L21 3z"></path></svg>
+</a>
+
+</body></html>
+
